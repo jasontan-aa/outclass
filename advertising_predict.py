@@ -35,4 +35,4 @@ X_new = df.values  # Convert the DataFrame to a NumPy array
 prediction = lr_model.predict(X_new)
 
 st.subheader('Prediction')
-st.write("Predicted Sales:%.2f ",prediction)
+st.write("Predicted Sales:%.2f ",round(prediction,2))
