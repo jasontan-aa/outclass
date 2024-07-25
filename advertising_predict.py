@@ -35,4 +35,4 @@ X_new = df.values  # Convert the DataFrame to a NumPy array
 prediction = lr_model.predict(X_new)
 
 st.subheader('Prediction')
-st.write(f"Predicted Sales: {prediction[0][0]:.2f}")
+st.write(f"Predicted Sales: {prediction:.2f}")
