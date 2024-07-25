@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 # Load your H5 model
-lr_model = pickle.load(open("TitanicBestModel.h5", "rb"))
+lr_model = pickle.load(open("advertising_lr.h5", "rb"))
 
 st.write("# Sales Prediction App")
 st.write("This app predicts the sales based on TV, Radio, and Newspaper Count")
