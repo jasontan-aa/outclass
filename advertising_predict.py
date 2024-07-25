@@ -1,11 +1,11 @@
 
 import streamlit as st
 import pandas as pd
-import tensorflow as tf
+import pickle
 import numpy as np
 
 # Load your H5 model
-model = tf.keras.models.load_model('advertising_lr.h5')  # Update with your actual model path
+lr_model = pickle.load(open("TitanicBestModel.h5", "rb"))
 
 st.write("# Sales Prediction App")
 st.write("This app predicts the sales based on TV, Radio, and Newspaper Count")
@@ -32,7 +32,7 @@ st.write(df)
 X_new = df.values  # Convert the DataFrame to a NumPy array
 
 # Make prediction using the loaded model
-prediction = model.predict(X_new)
+prediction = lr_model.predict(X_new)
 
 st.subheader('Prediction')
 st.write(f"Predicted Sales: {prediction[0][0]:.2f}")
